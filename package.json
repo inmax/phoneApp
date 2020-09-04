@@ -8,7 +8,7 @@
     "start": "webpack-dev-server --open",
     "build": "webpack --config webpack.config.js",
     "test": "jest --config jest.config.js",
-    "eslint": "eslint --ext .tsx,.js ./src/",
+    "eslint": "eslint --ext .tsx,.ts,.js ./src/",
     "lint": "npm run eslint",
     "format": "prettier --check --write ./src/**/*.{tsx,ts}",
     "precommit": "npm run lint"
@@ -79,12 +79,9 @@
     }
   },
   "lint-staged": {
-    "*.{js,ts}": [
-      "eslint --fix",
-      "prettier --write"
-    ],
-    "*.{json,yml,yaml}": [
-      "prettier --write"
+    "src/**/*.{ts,tsx,json}": [
+      "prettier --write",
+      "eslint ./src/**/*.{ts,tsx} --fix"
     ]
   }
 }
