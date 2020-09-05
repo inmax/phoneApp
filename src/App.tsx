@@ -1,7 +1,11 @@
 import React, { Suspense, lazy } from 'react';
 import PhoneList from './components/PhoneList';
 import Layout from './components/Layout';
+import { fetchData, getProductList } from './../src/data/actions/productActions';
+
 export default function App(): JSX.Element {
+  const product = getProductList();
+  console.log(product, 'product');
   return (
     <Layout
       content={
