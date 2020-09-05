@@ -11,6 +11,7 @@ export const sending_request = (): DispatchObject => ({
 });
 
 export const request_data = (data: any): DispatchObject => {
+  console.log(data, 'desde request data');
   return {
     type: types.REQUEST_DATA,
     payload: {

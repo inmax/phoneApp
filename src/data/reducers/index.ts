@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import navReducer from './navReducer';
-import productReducer from './productReducer';
+import navState from './navReducer';
+import productState from './productReducer';
 
-export default combineReducers({ navReducer, productReducer });
+export default combineReducers({ navState, productState });
