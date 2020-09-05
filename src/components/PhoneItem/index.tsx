@@ -7,6 +7,7 @@ interface PropsPhoneItem {
 }
 
 export default function PhoneItem({ phone, onShow }: PropsPhoneItem): JSX.Element {
+  const imgage = phone.imageFileName;
   return (
     <article className="item-film">
       <header>
@@ -14,7 +15,11 @@ export default function PhoneItem({ phone, onShow }: PropsPhoneItem): JSX.Elemen
         <h5></h5>
         <p>1997</p>
       </header>
-      <figure>{/* img */}</figure>
+      <figure>
+        <img
+          src={`https://raw.githubusercontent.com/inmax/interview-code-challenges/master/react/phone-catalogue/images/${imgage}`}
+        />
+      </figure>
       <footer className="item-film__footer"></footer>
     </article>
   );

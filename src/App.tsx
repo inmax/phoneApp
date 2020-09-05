@@ -1,28 +1,23 @@
-import React, { Suspense, lazy, useEffect, useState } from 'react';
+import React, { Suspense, lazy, useEffect } from 'react';
 import PhoneList from './components/PhoneList';
 import Layout from './components/Layout';
+import Spinner from 'react-bootstrap/Spinner';
+import { fetchData } from './../src/data/actions/productActions';
+import { connect } from 'react-redux';
+import get from 'lodash/get';
 
-export default function App(): JSX.Element {
-  const [items, setItems] = useState([]);
-  const getPhones = async () => {
-    const url = 'http://localhost:3000/phones';
-    await fetch(url)
-      .then((res) => res.json())
-      .then(
-        (result) => {
-          console.log(result);
-          setItems(result.phones);
-        },
-        (error) => {
-          console.log(error);
-        }
-      );
-  };
-
+function App({ fetchData, phones }: any): JSX.Element {
   useEffect(() => {
-    //función que define el efecto SECUNDARIO
-    getPhones();
+    fetchData();
   }, []);
 
-  return <Layout content={<PhoneList phones={items} />} />;
+  return <Layout content={<PhoneList phones={phones} />} />;
 }
+const mapStateToProps = (state: any, ownProps: any) => {
+  console.log(state, 'desde map props');
+  return {
+    phones: get(state, 'productState.list'),
+  };
+};
+
+export default connect(mapStateToProps, { fetchData })(App);
