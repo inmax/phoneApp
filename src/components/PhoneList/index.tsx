@@ -1,13 +1,9 @@
 import React from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { PhoneModel } from './../../models/PhoneModel';
+import { PropsPhoneList } from './../../models/PhoneModel';
 import PhoneItem from './../PhoneItem';
 import './styles.scss';
-
-interface PropsPhoneList {
-  phones: PhoneModel[];
-}
 
 export default function PhoneList({ phones }: PropsPhoneList): JSX.Element {
   return (

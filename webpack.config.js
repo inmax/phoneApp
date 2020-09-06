@@ -10,6 +10,7 @@ module.exports = () => {
     mode: "development",
     output: {
       path: path.resolve("//" + __dirname, "build"),
+      publicPath: '/',
       filename: "bundle.js",
     },
     resolve: {
@@ -17,6 +18,7 @@ module.exports = () => {
     },
     devServer: {
       contentBase: "./build",
+      historyApiFallback: true
     },
     devtool: "source-map",
     module: {

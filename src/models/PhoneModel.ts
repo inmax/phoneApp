@@ -10,3 +10,7 @@ export interface PhoneModel {
   processor?: string;
   ram?: number;
 }
+
+export interface PropsPhoneList {
+  phones: PhoneModel[];
+}
