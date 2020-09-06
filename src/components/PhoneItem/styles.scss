@@ -1,32 +1,31 @@
-@import "./../../theme/vars";
+@import './../../theme/vars';
 
-.item-film{
-    position: relative;
-    display: block;
-    border: 1px solid black;
-    padding:8px;
-    background-color: $bg-color;
-    border-radius: 12px;
-    margin:16px auto;
-    cursor: pointer;
-    &__title{
-        text-overflow:ellipsis;
-        overflow:hidden;
-        white-space: nowrap;
+.item-product {
+  position: relative;
+  display: block;
+  padding: 8px;
+  background-color: $bg-color;
+  margin: 16px auto;
+  cursor: pointer;
+  &__title {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  &__excerpt {
+    max-height: 70px;
+    overflow: hidden;
+  }
+  &__footer {
+    margin-top: 16px;
+    p {
+      font-family: $font-destacado;
+      font-size: 20px;
+      color: $primary-color;
+      text-align: right;
     }
-    &__excerpt{
-        max-height: 70px;
-        overflow: hidden;
-    }
-    &__footer{
-        margin-top:16px;
- 
-    }
-    &__adding-fav{
-        font-size:20px;
-
-    }
-    @media #{$desktop} {
-        padding:16px; 
-    }
+  }
+  @media #{$desktop} {
+    padding: 16px;
+  }
 }

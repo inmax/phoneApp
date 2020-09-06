@@ -1,0 +1,23 @@
+@import "./../../theme/vars";
+
+.logo{
+    padding: 16px 0;
+    margin:32px;
+    text-align: center;
+    font-style:italic;
+    @media #{$tabletLandscape} {
+        margin:0;
+    }
+}
+.align-middle{
+ align-items: center;
+}
+.content-top__form{
+    margin-bottom: 24px;
+    @media #{$tabletLandscape} {
+        margin:0;
+    }
+    @media #{$desktop} {
+        margin-left: 100px;
+    }
+}

@@ -1,16 +1,8 @@
 @import "./../../theme/vars";
 
-.list-films{
+.list-product{
    display:block;
-    
     @media #{$desktop} {
         margin-top:64px; 
     }
-    // @media #{$desktop2K} {
-    //     padding:112px; 
-    // }
-    // &__main-content{
-    //     display: block;
-    //     min-height:80vh;
-    // }
 }

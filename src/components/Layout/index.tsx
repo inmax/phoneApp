@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react';
 import Container from 'react-bootstrap/Container';
+import './styles.scss';
 
 type Props = {
   header?: string | JSX.Element;
