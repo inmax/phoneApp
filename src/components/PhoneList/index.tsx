@@ -3,6 +3,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { PropsPhoneList } from './../../models/PhoneModel';
 import PhoneItem from './../PhoneItem';
+import { Link } from 'react-router-dom';
 import './styles.scss';
 
 export default function PhoneList({ phones }: PropsPhoneList): JSX.Element {
@@ -11,7 +12,9 @@ export default function PhoneList({ phones }: PropsPhoneList): JSX.Element {
       <Row>
         {phones.map((phone, i) => (
           <Col key={phone.id} xs={6} md={4} lg={3}>
-            <PhoneItem phone={phone} />
+            <Link to={phone.id.toString()}>
+              <PhoneItem phone={phone} />
+            </Link>
           </Col>
         ))}
       </Row>

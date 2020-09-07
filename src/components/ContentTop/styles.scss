@@ -12,12 +12,3 @@
 .align-middle{
  align-items: center;
 }
-.content-top__form{
-    margin-bottom: 24px;
-    @media #{$tabletLandscape} {
-        margin:0;
-    }
-    @media #{$desktop} {
-        margin-left: 100px;
-    }
-}

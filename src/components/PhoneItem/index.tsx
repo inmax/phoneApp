@@ -4,7 +4,7 @@ import './styles.scss';
 
 interface PropsPhoneItem {
   phone: PhoneModel;
-  onShow?: () => void;
+  onClick?: () => void;
 }
 const defaultPropsPhoneModel = {
   name: 'Name',
@@ -14,7 +14,7 @@ const defaultPropsPhoneModel = {
   processor: 'Processor',
 };
 
-export default function PhoneItem({ phone, onShow }: PropsPhoneItem): JSX.Element {
+export default function PhoneItem({ phone, onClick }: PropsPhoneItem): JSX.Element {
   const {
     name = defaultPropsPhoneModel.name,
     screen = defaultPropsPhoneModel.name,
@@ -24,7 +24,7 @@ export default function PhoneItem({ phone, onShow }: PropsPhoneItem): JSX.Elemen
   } = phone;
 
   return (
-    <article className="item-product" onClick={onShow}>
+    <article className="item-product" onClick={onClick}>
       <header>
         <h4 className="item-product__title">{name}</h4>
         <p className="item-product__excerpt">

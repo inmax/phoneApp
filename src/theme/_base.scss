@@ -150,7 +150,7 @@ a {
   cursor: pointer;
   &:hover {
     color: $linkHover-color;
-    text-decoration: underline;
+    text-decoration: none;
   }
   &:visited {
     color: $linkVisited-color;
