@@ -63,8 +63,8 @@ $ npm start
 $ npm run deploy -- --remote=<remote>
 ``` 
  
-Environment variables
+<!-- Environment variables
 ```bash
 URL_API
 
-```
+``` -->
