@@ -3,14 +3,14 @@
 This application is the interface of a brief phone model list. 
 It takes part of the meta repository root:
 
-https://github.com/inmax/phone-catalogue
+[Project root](https://github.com/inmax/phone-catalogue)
 
 ## Technology
 
 - React Hook
 - Redux
 - React Bootstrap (UI Framework) to Grid
-- Jest
+
 
  ## Demo
 
@@ -18,23 +18,53 @@ https://github.com/inmax/phone-catalogue
 Please visit : ____________________ for demo
 
 
-## Development
+## Usage
 
-<!-- Clone the repo:
+Installing:
+
+`npm i -g meta` will install a `meta` command on your system.
+
+Clone the meta repo:
+
 ```bash
-$  metagit clone https://github.com/inmax/filmSearch.git
+$  meta git clone https://github.com/inmax/phone-catalogue.git
 ``` 
 
+## Getting started
+#### [Api](https://github.com/inmax/phoneApi.git)
 In the project app directory, you can run:
 ```bash
-$ npm install
-``` 
-Run locally in a web browser:
-```bash
-npm start
-``` 
-For production environments
+$ cd phoneApi
 
+# install dependencies
+$ npm install # Or yarn install
+
+# serve with hot reload at localhost:3000
+$ npm start
+
+``` 
+
+#### [App](https://github.com/inmax/phoneApp.git)
+In the project app directory, you can run:
 ```bash
-npm run build
-``` -->
+$ cd phoneApp
+
+# install dependencies
+$ npm install # Or yarn install
+
+# serve with hot reload at localhost:8080
+$ npm start
+
+# build for production and launch server
+$ npm run build
+$ npm start
+
+# deploy
+$ npm run deploy -- --remote=<remote>
+``` 
+ 
+Environment variables
+```bash
+URL_API
+
+```

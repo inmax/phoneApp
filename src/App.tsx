@@ -17,7 +17,6 @@ function App(props: { fetchData: any; phones: any; error: any; isLoaded: any }):
   useEffect(() => {
     props.fetchData();
   }, []);
-
   if (props.error) {
     return <Layout content={<p>Sorry, We have some problem. Try again later</p>} />;
   } else if (props.phones.length === 0) {

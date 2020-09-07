@@ -3,6 +3,8 @@ import { DispatchObject } from '../../util/types';
 import get from 'lodash/get';
 import axios from 'axios';
 
+const URL_API: string = process.env.URL_API || 'http://localhost:3000/phones';
+
 export const sending_request = (): DispatchObject => ({
   type: types.SENDING_REQUEST,
   payload: {
@@ -31,7 +33,7 @@ export const request_error = (data: any): DispatchObject => ({
 
 export const getProductList = (): any => {
   return axios
-    .get('http://localhost:3000/phones')
+    .get(`http://localhost:3000/phones`)
     .then((res) => ({ ...res }))
     .catch((error) => error);
 };
