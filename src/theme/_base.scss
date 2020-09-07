@@ -76,7 +76,7 @@ h2 {
   text-align: center;
   @media only screen and (min-width: 992px) {
     text-align: left;
-    font-size: 3.6px;
+    font-size: 36px;
   }
 }
 
@@ -206,4 +206,9 @@ blockquote {
 
 ul {
   padding-left: 0;
+}
+
+.bold{
+  font-weight:500;
+  color:#616161;
 }

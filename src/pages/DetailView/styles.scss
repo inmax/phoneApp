@@ -1,0 +1,23 @@
+@import './../../theme/vars';
+.view-detail {
+  max-width: 960px;
+  margin: 0 auto;
+  h2{
+    text-align: left;
+  }
+  @media #{$tabletPortrait} {
+    padding: 24px;
+    margin: 80px auto;
+  }
+  &__link {
+    a {
+      display: block;
+      color: $primary-color;
+      font-size: 18px;
+      margin-bottom: 30px;
+      &::before{
+          content: "< ";
+      }
+    }
+  }
+}
